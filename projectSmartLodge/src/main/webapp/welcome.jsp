@@ -1,5 +1,6 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<%@ page import="javax.servlet.http.HttpSession" %>
+<%@ page import="jakarta.servlet.http.HttpSession" %>
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -9,13 +10,13 @@
     <body>
         <%
             HttpSession ss = request.getSession(false);
-            if (ss == null || session.getAttribute("username") == null) {
+            if (ss == null || ss.getAttribute("username") == null) {
                 response.sendRedirect("login.jsp");
                 return;
             }
             String username = (String) ss.getAttribute("username");
         %>
-        <h1>Welcome, <%= username %>!</h1>
+        <h1>Welcome, <%= username%>!</h1>
         <a href="logout.jsp">Logout</a>
     </body>
 </html>

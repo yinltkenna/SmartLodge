@@ -20,7 +20,7 @@
             <div class="form-right">
                 <div class="form-wrap">
                     <div class="title">Đăng nhập</div>
-                    <form method="post" acction="Login" class="form-input">
+                    <form method="post" action="LoginDAOs" class="form-input">
                         <div class="form-group">
                             <label for="login-username" class="form-label">Tài khoản</label>
                             <input type="text" name="username" id="login-username" class="btnInput" />
