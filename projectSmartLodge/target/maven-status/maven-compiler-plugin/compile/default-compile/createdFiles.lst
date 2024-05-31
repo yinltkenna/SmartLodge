@@ -1,3 +1,4 @@
-Models\User.class
-DAOs\LoginDAOs.class
 DB\DBConnection.class
+Models\User.class
+DAOs\RegisterDAOs.class
+DAOs\LoginDAOs.class

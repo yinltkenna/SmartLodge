@@ -4,9 +4,17 @@
         <servlet-name>LoginDAOs</servlet-name>
         <servlet-class>DAOs.LoginDAOs</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>RegisterDAOs</servlet-name>
+        <servlet-class>DAOs.RegisterDAOs</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>LoginDAOs</servlet-name>
         <url-pattern>/LoginDAOs</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>RegisterDAOs</servlet-name>
+        <url-pattern>/RegisterDAOs</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

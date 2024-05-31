@@ -76,7 +76,8 @@ public class LoginDAOs extends HttpServlet {
             throws ServletException, IOException {
         String username = request.getParameter("username");
         String password = request.getParameter("password");
-        if (checkLogin(username, password)) {
+        if ((username != null && password != null)
+                && checkLogin(username, password)) {
             HttpSession session = request.getSession();
             session.setAttribute("username", username);
             response.sendRedirect("welcome.jsp");
@@ -94,16 +95,13 @@ public class LoginDAOs extends HttpServlet {
                 ps.setString(1, username);
                 ps.setString(2, password);
                 ResultSet rs = ps.executeQuery();
-                System.out.println("Executing query: " + query);
 
                 return rs.next();
             } catch (SQLException e) {
-                e.printStackTrace();
             } finally {
                 try {
                     conn.close();
                 } catch (SQLException e) {
-                    e.printStackTrace();
                 }
             }
         }
